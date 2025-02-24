@@ -13,3 +13,4 @@ changed code to:
     int blue = int(200 * (1 - normalizedY));
 - changed gradient from horizontal to vertical:
     float normalizedY = map(y, 0, height - 1, 0, 1);
+    
