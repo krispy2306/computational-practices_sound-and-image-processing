@@ -23,7 +23,7 @@ Created greyscale images and altered brightness of pixels
 - (see '2-colour-flower.gif' file for outcome)
 
 
-**CAT File**
+**Greyscale Task File**
 
 - weekly task: use the code given to revert the image back to original colour + 3 histograms for red, green, blue levels (RGB)
 - used downloaded cat image:
