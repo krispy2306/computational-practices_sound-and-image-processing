@@ -1,0 +1,50 @@
+void setup() {
+  size(2560, 1714);
+  sample = loadImage("cat.jpg");
+}
+
+void draw() {
+  image(sample, 0, 0);
+
+  int[] redHistogram = new int[256];
+  int[] greenHistogram = new int[256];
+  int[] blueHistogram = new int[256];
+  
+  // calculate a gray pixel from all channels
+  // and draw it to screen
+  for (int i = 0; i < sample.pixels.length; i++) {
+    
+    
+    // shade is an int from 0-255
+    int rPixelShade = int(red(sample.pixels[i]));
+    int gPixelShade = int(green(sample.pixels[i]));
+    int bPixelShade = int(blue(sample.pixels[i]));
+    
+    
+    
+    // add to histogram
+    redHistogram[rPixelShade]++;
+    greenHistogram[gPixelShade]++;
+    blueHistogram[bPixelShade]++;
+  }  
+
+  updatePixels();
+  
+  // draw histogram
+  for (int i = 0; i < 256; i++) {
+    // red histogram
+    stroke(255, 0, 0);
+    float rStartHeight = map(redHistogram[i], 0, max(redHistogram), height, height-(height/3));
+    line(i, rStartHeight, i, height);
+    
+    // green histogram
+    stroke(0, 255, 0);
+    float gStartHeight = map(greenHistogram[i], 0, max(greenHistogram), height, height-(height/3));
+    line(i + 256, gStartHeight, i + 256 , height);
+    
+    //blue histogram
+    stroke(0, 0, 255);
+    float bStartHeight = map(blueHistogram[i], 0, max(blueHistogram), height, height-(height/3));
+    line(i + 512, bStartHeight, i + 512, height);
+  }
+}
