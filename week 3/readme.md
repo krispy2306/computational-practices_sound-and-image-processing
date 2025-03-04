@@ -1,0 +1,32 @@
+# Week 2 Tasks
+
+- Explored vector graphics
+- Used vector primities to construct different shapes
+- Explored vector transformations and states (transformation matrix)
+
+**Requirements:**
+
+- Written in Processing 4.3
+- Run all files in Processing
+
+
+**Weekly Task - 'circle grid' file**
+
+The weekly task was to make a grid of circles, with each circle having a different colour in a checkerboard pattern.
+
+- started by making 400x400 window
+- then in the draw function, I made my grid:
+
+'for (int i = 0; i < 70; i++) 
+
+    int row = i / 8;
+
+    int column = i % 8;
+
+
+    float x = 30 + 50 * column;
+
+    float y = 30 + 50 * row;'
+
+- had to alter 'i < 70' value a few times to ensure the window was full
+-![alt text](image.png)
