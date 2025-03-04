@@ -30,3 +30,10 @@ The weekly task was to make a grid of circles, with each circle having a differe
 
 - had to alter 'i < 70' value a few times to ensure the window was full
 -![alt text](image.png)
+- then tried to select random colours:
+
+'fill(random(255), random(255), random(255));'
+
+- but this returned the colours of the circles alternating between random RGB values every second:
+![alt text](image-1.png)  ![alt text](image-2.png)
+![alt text](image-3.png)
