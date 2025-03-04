@@ -1,0 +1,28 @@
+void setup() {
+  size(400, 400);
+  ellipseMode(CENTER);
+  noLoop();
+}
+
+void draw() {
+
+  for (int i = 0; i < 70; i++) {
+    int row = i / 8;
+    int column = i % 8;
+
+    float x = 30 + 50 * column;
+    float y = 30 + 50 * row;
+    
+    if ((row + column) % 2 == 0) {
+      fill(random(0,100), random(0, 100), random(150, 255));
+    }
+    else {
+     fill(random(200,255), random(0, 100), random(150,255));
+    }
+
+  pushMatrix();
+   circle(x, y, 50);
+   noStroke();
+  popMatrix();  
+  }
+} 
