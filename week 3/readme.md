@@ -51,4 +51,4 @@ The weekly task was to make a grid of circles, with each circle having a differe
 - shades of pink in the 'else' statement
 ![alt text](images/image-4.png) 
 - decide to do 'noStroke();' for a better look
-- ![alt text](images/image-5.png) 
+ ![alt text](images/image-5.png) 
