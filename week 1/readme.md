@@ -13,6 +13,8 @@ Run 'pixels' and 'gradient' file in Processing
 - followed code in class
 - no adjustments made
 
+![ ](images/image.png)
+
 **GRADIENT FILE**
 
 - followed code in class
@@ -23,4 +25,6 @@ changed code to:
     'int blue = int(200 * (1 - normalizedY));'
 - changed gradient from horizontal to vertical:
     'float normalizedY = map(y, 0, height - 1, 0, 1);'
+    
+![alt text](images/image-1.png)
     
