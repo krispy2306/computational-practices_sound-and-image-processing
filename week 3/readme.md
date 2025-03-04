@@ -17,7 +17,7 @@ The weekly task was to make a grid of circles, with each circle having a differe
 - started by making 400x400 window
 - then in the draw function, I made my grid:
 
-'for (int i = 0; i < 70; i++) 
+    'for (int i = 0; i < 70; i++) 
 
     int row = i / 8;
 
