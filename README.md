@@ -2,7 +2,7 @@
  
  Nikita Collins (@n.collins1120231@arts.ac.uk)
 
-**Class tasks for every week:**
+**Class work and weekly tasks for every week:**
 
 - Week-01: Pixels and Colour
 - Week-02: Manipulating and Analyzing Pixels
