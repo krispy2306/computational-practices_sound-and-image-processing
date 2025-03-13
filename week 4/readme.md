@@ -21,12 +21,12 @@ Aim: replace the rectangles with the vertex() functions to make a smooth line ba
 - added: 'vertex(i*xStep, yPos);' to create a vertex at each x position
 - 'endShape();'
 Final output:
-![alt text](image.png)
+![alt text](images/image.png)
 
 - decided to change colour to magenta: 'fill(255, 0, 255);'
 '
 Final output:
-![ ](image1.png)
+![ ](images/image1.png)
 
 
 **2D Noise Vertex Task**
@@ -62,23 +62,23 @@ but didn't work
 - ^forgot to add 'color colorA =' 
 
 Output:
-![alt text](image2.png)
+![alt text](images/image2.png)
 
 Other interesting outputs:
 
-![alt text](image3.png)
+![alt text](images/image3.png)
 'int x = i % width;
  int y = i % width;'
 
-![alt text](image4.png)
+![alt text](images/image4.png)
 'int x = i * width;
     int y = i * width;'
 
-![alt text](image5.png)
+![alt text](images/image5.png)
 'int x = i / 40;
     int y = i % width;'
 
-![alt text](image6.png)
+![alt text](images/image6.png)
 '    int x = i / 50;
     int y = i / width;'
 
