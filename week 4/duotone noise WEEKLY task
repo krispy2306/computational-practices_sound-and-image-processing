@@ -1,0 +1,33 @@
+void setup() {
+  size(600,600);
+  frameCount = 120;
+  
+//noLoop();
+}
+
+void draw() {
+  loadPixels();
+  
+  color colorA = color(255, 255, 0);
+  color colorB = color(186, 85, 211);
+  
+  for(int i = 0; i < pixels.length; i++) {
+    int x = i / 50;
+    int y = i / width;
+    
+   // float noiseValue = noise(x/5, y/10);// set the value at each x/y
+   // color gray = color(map(noiseValue, 0, 1, 0, 255));
+    color gray = color(map(noise(x/10, y/10), 0, 1, 0, 255));  // greyscale noise
+    
+    pixels[i] = duotone(gray, colorA, colorB);
+  }
+  
+  updatePixels();
+}
+
+color duotone(color pixel, color colorA, color colorB) {
+  float tone = red(pixel);
+  float lerpAmount = norm(tone, 0, 255);
+  return lerpColor(colorA, colorB, lerpAmount);
+}
+
