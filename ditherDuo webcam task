@@ -1,0 +1,98 @@
+import processing.video.*;
+
+Capture cam;
+
+void setup() {
+  size(640, 480);
+
+  String[] cameras = Capture.list();
+  
+  if (cameras.length == 0) {
+        println("Available cameras:");
+  }
+    for (int i = 0; i < cameras.length; i++) {
+      println(cameras[i]);
+    }
+    
+    // The camera can be initialized directly using an 
+    // element from the array returned by list():
+    cam = new Capture(this, 640, 480, cameras[0], 30);
+    cam.start();     
+  }      
+
+
+void draw() {
+  // every frame, if the camera is ready, we update `cam` to have
+  // the latest data from it
+  if (cam.available() == true) {
+    cam.read();
+  }
+  
+ 
+  image(cam,0,0);
+  
+  // to draw the new image pixel-by-pixel:
+  // the Capture object (cam) has a property "pixels" that works just like a screen.
+  loadPixels();
+  cam.loadPixels();
+  
+  color colorA = color(38, 243, 10);  // lime
+  color colorB = color(10, 197, 243) ;  // blue
+  
+  for(int i = 0; i < cam.pixels.length; i++) {
+    float greyValue = red(cam.pixels[i]);   
+    
+    float newPixelValue = 0;
+    if(greyValue > 127) {    
+      newPixelValue = 255;
+  }
+  
+    float error = greyValue - newPixelValue;
+  
+    pixels[i] = duotone(color(newPixelValue), colorA, colorB);    // changing colour 
+    
+    fsDither(i, error, colorA, colorB);
+    
+  } 
+  
+  updatePixels();
+}
+
+// dithering
+void fsDither(int i, float error, color colorA, color colorB) {
+  
+  int[] offsets = {
+    1, width - 1, width, width + 1
+  };
+ 
+  float[] ditherRatios = {
+    7/16.0, 3/16.0, 5/16.0, 1/16.0
+  };
+  
+  for (int j = 0; j < offsets.length; j++) {
+    int neighbourIndex = i + offsets[j];
+    if(neighbourIndex < cam.pixels.length) {
+      float neighbourGrey = red(pixels[neighbourIndex]);
+      float newGrey = neighbourGrey + (error * ditherRatios[j]);
+      
+      // applies duotone filter
+      pixels[neighbourIndex] = duotone(color(newGrey), colorA, colorB);
+            
+    }
+  }
+}
+
+//duotone function
+color duotone(color pixel, color colorA, color colorB) {
+  float tone = red(pixel);
+  float lerpAmount = norm(tone, 0, 255);
+  return lerpColor(colorA, colorB, lerpAmount);
+}
+
+
+void keyPressed() {
+  // pressing S will save the current frame to disk
+  if(key == 's') {
+    saveFrame("frame-######.jpg");
+  }
+}
