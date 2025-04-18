@@ -6,8 +6,9 @@
 
 
 **Requirements:**
-Written in Processing 4.3
-Run 'sci fi sound' file in Processing
+
+- Written in Processing 4.3
+- Run 'sci fi sound' file in Processing
 
 
 **Sci-fi Sound Weekly Task**
@@ -20,7 +21,7 @@ Aim: Using at least 3 oscillators and/or filters, design a sound for a sci-fi mo
 - set volume and frequency: 'sine1.amp(0.5);' and 'sine1.freq(220);'  (A3 note)
 
 '
-      if (elapsed < 1500) {
+    if (elapsed < 1500) {
     float freq = 220 + 200 * sin(radians(elapsed * 0.3));
     float amp = map(elapsed, 0, 1500, 0.5, 0);
     
