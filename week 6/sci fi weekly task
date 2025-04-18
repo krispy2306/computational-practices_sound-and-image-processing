@@ -11,22 +11,22 @@ void setup() {
   size(640, 360);
   background(0);
 
-  // Initialize oscillators
+  // initialise oscillators
   sineOsc = new SinOsc(this);
   triOsc = new TriOsc(this);
   filter = new LowPass(this);
 
-  // Start both oscillators with no volume yet
+  // no volume
   sineOsc.amp(0.0);
   triOsc.amp(0.0);
   sineOsc.freq(220);
   triOsc.freq(220);
   
-  // Apply filter to both
+  // apply filter to both
   filter.process(sineOsc);
   filter.process(triOsc);
 
-  // Start playback
+  
   sineOsc.play();
   triOsc.play();
 
@@ -40,16 +40,16 @@ void draw() {
   float duration = 7000; // 7 seconds
 
   if (elapsed < duration) {
-    // Frequency sweep with slight modulation
+    
     float baseFreq = map(elapsed, 0, duration, 220, 660);
     float vibrato = 15 * sin(radians(elapsed * 2));
     float freq = baseFreq + vibrato;
 
-    // Apply to both oscillators
+    // apply to both oscillators
     sineOsc.freq(freq);
-    triOsc.freq(freq * 0.5); // Lower harmonic for added richness
+    triOsc.freq(freq * 0.5); // lower harmonic 
 
-    // Amplitude envelope (fade in and out)
+    // fade in fade out
     float amp;
     if (elapsed < duration * 0.3) {
       amp = map(elapsed, 0, duration * 0.3, 0.0, 0.5);
@@ -57,9 +57,9 @@ void draw() {
       amp = map(elapsed, duration * 0.3, duration, 0.5, 0.0);
     }
     sineOsc.amp(amp);
-    triOsc.amp(amp * 0.6); // Slightly quieter triangle wave
+    triOsc.amp(amp * 0.6); // slightly quieter triangle wave
 
-    // Slowly open filter from muffled to clear
+    
     float cutoff = map(elapsed, 0, duration, 200, 5000);
     filter.freq(cutoff);
 
