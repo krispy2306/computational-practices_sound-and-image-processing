@@ -35,18 +35,22 @@ Aim: Using at least 3 oscillators and/or filters, design a sound for a sci-fi mo
 - Also added 'LowPass' filter to control high-frequency
 
 - Added: '
+
   sineOsc.amp(0.0);
   triOsc.amp(0.0);
   sineOsc.freq(220);
   triOsc.freq(220);
+
 '
 - Routed both oscillators through the LowPass filter
 - Set sound duration to 7 seconds
 
 - Frequency modulation: '
+
     float baseFreq = map(elapsed, 0, duration, 220, 660);
     float vibrato = 15 * sin(radians(elapsed * 2));
     float freq = baseFreq + vibrato;
+    
 '
 - vibrato to add pitch fluctation
 - Set the triangle oscillator 1 octave lower to add harmony and made it quieter 
