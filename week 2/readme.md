@@ -26,12 +26,18 @@ Created greyscale images and altered brightness of pixels
 - weekly task: use the code given to revert the image back to original colour + 3 histograms for red, green, blue levels (RGB)
 - removed 'loadPixels' and displayed original image with: 'image(sample, 0, 0);
 - changed 'histogram' to 'redHistogram' (was measuring red channel already)
-- added ```int[] greenHistogram = new int[256];
-  int[] blueHistogram = new int[256];
+- added 
 ```
-- added ```int rPixelShade = int(red(sample.pixels[i]));
+int[] greenHistogram = new int[256];
+int[] blueHistogram = new int[256];
+```
+- added
+```
+int rPixelShade = int(red(sample.pixels[i]));
 int gPixelShade = int(green(sample.pixels[i]));
-int bPixelShade = int(blue(sample.pixels[i]));``` to calculate histograms
+int bPixelShade = int(blue(sample.pixels[i]));
+``` 
+to calculate histograms
 - changed ```histogram[pixelShade]++;``` to ```redHistogram[rPixelShade]++;``` and added the same for green and blue channels 
 - changed ```float startHeight = map(histogram[i], 0, max(histogram), height, height-(height/3));```
 
