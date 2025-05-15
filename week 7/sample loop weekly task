@@ -1,0 +1,54 @@
+import processing.sound.*;
+
+SoundFile sample1;
+SoundFile sample2;
+SoundFile sample3;
+
+
+float bpm = 120; // beats per minute
+
+float myFrameRate = 120 / 60; // frame rate = beats per second
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Load a soundfile from the /data folder of the sketch and play it back
+  // https://processing.org/reference/libraries/sound/SoundFile.html
+  sample1 = new SoundFile(this, "../data/heavy-trance-kick.wav");
+  // set amplitude
+  sample1.amp(0.6);
+  // playback rate
+  // * 2 for octave higher
+  // -1 to pllay backwards
+  sample1.rate(0.5 *2);
+  
+  sample2 = new SoundFile(this, "../data/glitchy-breakcore-lead_170bpm_G_minor.wav");
+  sample2.amp(1.0 * 2);
+  sample2.rate((1.0 * 1.2));
+  
+  sample3 = new SoundFile(this, "../data/trance-vocal-gateway_93bpm.wav");
+  sample3.amp(0.1 * 2);
+  sample3.rate(0.5 * 2);
+  frameRate(myFrameRate);
+  
+  sample2.play();
+  sample2.loop();
+    
+}
+
+void draw() {
+  background(random(255), random(255), random(255));
+  
+  
+  // play every beat
+ //if (frameCount % 2 ==0) {
+   sample1.play();
+ // }
+ 
+  //// play every eighth beat
+ if (frameCount % 8 == 0) {
+    sample3.play();
+      sample3.loop();
+   }
+}
