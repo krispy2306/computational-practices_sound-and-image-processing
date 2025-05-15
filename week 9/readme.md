@@ -18,7 +18,7 @@ Aim: Make a game using:
 - at least 1 type of interaction
 
 
-- Decided to develop from class code - 'bouncing ball'
+Decided to develop from class code - 'bouncing ball'
 
 
 Brainstorming ideas for game:
