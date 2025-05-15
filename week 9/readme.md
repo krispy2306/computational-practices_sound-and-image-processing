@@ -14,7 +14,10 @@ Aim: Make a game using:
 - at least 2 forces influencing the object movement
 - at least 1 type of interaction
 
+
 - Decided to develop from class code - 'bouncing ball'
+
+
 Brainstorming ideas for game:
 - 2 forces acting on the bouncing balls - gravity and wind
 - Aim of the game is to avoid the balls
