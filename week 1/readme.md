@@ -5,9 +5,8 @@ Worked with finding pixels and getting the colour
 Experimented with gradients and different directions and colours of the gradient
 
 **Requirements:**
-Written in Processing 4.3
-
-Run 'pixels' and 'gradient' file in Processing
+- Written in Processing 4.3
+- Run 'pixels' and 'gradient' file in Processing
 
 
 **GRADIENT WEKLY TASK FILE**

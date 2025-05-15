@@ -5,11 +5,9 @@
 
 **Requirements:**
 
-Written in Processing 4.4
-
-Run files in Processing
-
-Ensure 'ball' and 'player' class files are also downloaded for 
+- Written in Processing 4.4
+- Run files in Processing
+- Ensure 'ball' and 'player' class files are also downloaded for 
 the game sketch to work
 
 **Game_2 Weekly Task**
