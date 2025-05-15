@@ -1,3 +1,5 @@
+PImage sample;
+
 void setup() {
   size(2560, 1714);
   sample = loadImage("cat.jpg");

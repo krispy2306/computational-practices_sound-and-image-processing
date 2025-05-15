@@ -10,6 +10,7 @@ Created greyscale images and altered brightness of pixels
 
 - Written in Processing 4.3
 - Run all files in Processing
+- Ensure files in data folder are downloaded for sketch to work
 
 **2 Colour Team File**
 
@@ -21,7 +22,7 @@ Created greyscale images and altered brightness of pixels
 - (see '2-colour-flower.gif' file for outcome)
 
 
-**Greyscale Task File**
+**Greyscale Weekly Task File**
 
 - weekly task: use the code given to revert the image back to original colour + 3 histograms for red, green, blue levels (RGB)
 - removed 'loadPixels' and displayed original image with: 'image(sample, 0, 0);
@@ -62,6 +63,7 @@ line(i, bStartHeight, i, height);
 - also added '[i + 256]' for the green histogram and '[i + 512]' for blue histogram to shift them to right so they are visible
 - (could not add screengrab of outcome as the window is too large for the screen( image size is too large))
 
-
+Histogram values: (had to change window size to 700, 700 to fit on screen)
+![alt text](images/image.png)
     
 

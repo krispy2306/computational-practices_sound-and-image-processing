@@ -29,8 +29,8 @@ pixels[i] = map(noise(x/5, y/10), 0, 1, 0, 255);
 pixels[i] = duotone(pixels[i], colorA, colorB);
 ```
 but didn't work
-
-```color gray = color(map(noise(x/5, y/10), 0, 1, 0, 255));
+```
+color gray = color(map(noise(x/5, y/10), 0, 1, 0, 255));
 ```
 - Tried this and it worked, so then I added the duotone function underneath to convert grayscale pixels:
 ```
