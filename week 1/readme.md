@@ -6,6 +6,7 @@ Experimented with gradients and different directions and colours of the gradient
 
 **Requirements:**
 Written in Processing 4.3
+
 Run 'pixels' and 'gradient' file in Processing
 
 
