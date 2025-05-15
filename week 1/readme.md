@@ -8,14 +8,8 @@ Experimented with gradients and different directions and colours of the gradient
 Written in Processing 4.3
 Run 'pixels' and 'gradient' file in Processing
 
-**PIXELS FILE**
 
-- followed code in class
-- no adjustments made
-
-![ ](images/image.png)
-
-**GRADIENT FILE**
+**GRADIENT WEKLY TASK FILE**
 
 - followed code in class
 - changed colours to pink red and white 
