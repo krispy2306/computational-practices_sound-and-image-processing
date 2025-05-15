@@ -4,11 +4,13 @@
 
 
 **Requirements:**
+
 Written in Processing 4.4
 Run files in Processing
 Ensure 'ball' and 'player' class files are also downloaded for the game sketch to work
 
 **Game_2 Weekly Task**
+
 Aim: Make a game using:
 - at least 1 class
 - at least 2 forces influencing the object movement
