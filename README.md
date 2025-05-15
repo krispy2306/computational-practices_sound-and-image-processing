@@ -13,6 +13,6 @@
 - Week-05: Convolution and Dithering
 - Week-06: Digital Sound
 - Week-07: Synthesizing Sound
-- Week-08: Hackathon (NO WEEKLY TASK)
+- Week-08: Hackathon (**NO WEEKLY TASK**)
 - Week-09: Particles, Systems
 - Week-10: Simulation & Behaviour
