@@ -1,4 +1,4 @@
-# Week 5 Tasks
+# Week 6 Tasks
 
 - Explored sound and its physical properties
 - Explored sound synthesis by creating an oscillator
@@ -18,8 +18,8 @@ Aim: Using at least 3 oscillators and/or filters, design a sound for a sci-fi mo
 
 - Started by building upon example code given in class
 - Added 'soundPlayed' so the sound plays only once
-- set volume and frequency: 'sine1.amp(0.5);' and 'sine1.freq(220);'  (A3 note)
-```
+- set volume and frequency: 
+```sine1.amp(0.5);' and 'sine1.freq(220);'  (A3 note)
     if (elapsed < 1500) {
     float freq = 220 + 200 * sin(radians(elapsed * 0.3));
     float amp = map(elapsed, 0, 1500, 0.5, 0);

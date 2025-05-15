@@ -7,7 +7,8 @@
 
 **Requirements:**
 Written in Processing 4.3
-Run 'pixels' and 'gradient' file in Processing
+Run files in Processing
+Ensure files in data folder are accessable for Processing
 
 
 **Sample Loop Weekly Task**

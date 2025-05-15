@@ -27,8 +27,7 @@ Aim: Implement a real-time image program that applies a dithering and image filt
 - cleaned up code by adding float ```newGrey = neighbourGrey + (error * ditherRatios[j]);```
 - final duotone filter: ```pixels[neighbourIndex] = duotone(color(newGrey), colorA, colorB);```
 - added the duotone function below:
-```
-  color duotone(color pixel, color colorA, color colorB) {
+```color duotone(color pixel, color colorA, color colorB) {
   float tone = red(pixel);
   float lerpAmount = norm(tone, 0, 255);
   return lerpColor(colorA, colorB, lerpAmount);
