@@ -48,16 +48,18 @@ Brainstorming ideas for game:
     y += vy;
 ```
 - player properties:
-```  void display() {
+```void display() {
     stroke(255, 255, 255);
     strokeWeight(4);
     fill(255, 0, 0);
-    rect(x, y, w, h);```
-``` Player() {
+    rect(x, y, w, h);
+```
+```Player() {
     x = width/ 2;
     y = width / 2;
     w = 30;
     h = 30;
     vx = 0;
     vy = 0;
-  }```
+  }
+```
