@@ -29,7 +29,7 @@ Brainstorming ideas for game:
 - kept base code from class the same but changed the circles' radius to 5 so they were bigger for the player to avoid
 - began implementing a Player class
 - needed to create keyboard input for player movement:
-'''  void update() {
+```  void update() {
     //check for keys
     if(LEFT) {
       vx = -5;
@@ -46,19 +46,18 @@ Brainstorming ideas for game:
     // update position
     x += vx;
     y += vy;
-'''
+```
 - player properties:
-'''  void display() {
+```  void display() {
     stroke(255, 255, 255);
     strokeWeight(4);
     fill(255, 0, 0);
-    rect(x, y, w, h);'''
-'''  Player() {
+    rect(x, y, w, h);```
+``` Player() {
     x = width/ 2;
     y = width / 2;
     w = 30;
     h = 30;
     vx = 0;
     vy = 0;
-  }'''
-  
+  }```
