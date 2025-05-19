@@ -1,0 +1,98 @@
+ArrayList<Ball> balls;
+int ballCount = 3;
+boolean LEFT, RIGHT, UP, DOWN; 
+
+PVector gravity;
+PVector wind;
+
+Player p;
+
+void setup() {
+  size(1000, 1000);
+  
+  balls = new ArrayList<Ball>();
+  for (int i= 0; i < ballCount; i++) {
+    balls.add(new Ball(random(60, width), 100, random(20, 60)));
+  }
+  
+  gravity = new PVector(0, 0.5);
+  wind = new PVector(0.4, 0);
+  
+  LEFT = false;
+  RIGHT = false;
+  UP = false;
+  DOWN = false;
+  
+  p = new Player();
+    
+}
+
+void draw() {
+  background(0);
+  
+  for (Ball b : balls) {
+    PVector g = gravity.copy().mult(b.mass);
+    b.applyForce(g);
+    b.applyForce(wind);
+      
+    b.update();
+    b.display();
+  }
+  
+  p.update();
+  p.display();
+  
+  collisions();
+}
+
+void keyPressed() {
+  if (key == 'r') {
+    setup();
+  }
+  if(keyCode == 37) {
+    LEFT = true;
+  }
+  if(keyCode == 38) {
+    UP = true;
+  }
+  if(keyCode == 39) {
+    RIGHT = true;
+  }
+  if(keyCode == 40) {
+    DOWN = true;
+  }
+}
+
+void keyReleased() {
+  if(keyCode == 37) {
+    LEFT = false;
+  }
+  if(keyCode == 38) {
+    UP = false;
+  }
+  if(keyCode == 39) {
+    RIGHT = false;
+  }
+  if(keyCode == 40) {
+    DOWN = false;
+  }
+}
+
+void collisions() {
+  for (Ball b : balls) {
+    float px = p.x;
+    float py = p.y;
+    float pw = p.w;
+    float ph = p.h;
+    
+    float bx = b.position.x;
+    float by = b.position.y;
+    float br = b.radius;
+    
+    if(bx + br > px && bx - br < px + pw &&
+       by + br > py && by - br < py + ph) {
+      setup();
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+class Player {
+  float x, y, w, h;
+  float vx, vy;
+  
+  
+  Player() {
+    x = width/ 2;
+    y = width / 2;
+    w = 30;
+    h = 30;
+    vx = 0;
+    vy = 0;
+  }
+  
+  void update() {
+    //horizontal movement
+    if(LEFT) {
+      vx = -8;
+    }
+    else if(RIGHT) {
+      vx = 8;
+    }
+    else if(!LEFT && !RIGHT) {
+      vx = 0;
+    }
+    
+    // vertical movement
+    if(UP) {
+      vy = -8;
+    }
+    else if(DOWN) {
+      vy = 8;
+    }
+    else if(!UP && !DOWN) {
+      vy = 0;
+    }
+    
+    // update position
+    x += vx;
+    y += vy;
+    
+    // boundary check
+    if(x < -w) {
+      x = width;
+    }
+    else if (x > width) {
+      x = -w;
+    }
+    if(y < -h) {
+      y = height;
+    }
+    else if(y > height) {
+      y = -height;
+    }
+  }
+    
+  void display() {
+    fill(255, 0, 0);
+    stroke(255, 255, 255);
+    strokeWeight(5);
+    rect(x, y, w, h);
+  }
+}  
