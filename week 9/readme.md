@@ -10,7 +10,9 @@
 - Ensure 'ball' and 'player' class files are also downloaded for 
 the game sketch to work
 
-**Game_2 Weekly Task**
+
+
+**GAME Weekly Task:**
 
 Aim: Make a game using:
 - at least 1 class
