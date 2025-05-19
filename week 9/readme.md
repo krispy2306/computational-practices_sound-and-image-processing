@@ -71,7 +71,7 @@ Brainstorming ideas for game:
 - Realised 4 balls is a bit too much for the player to dodge, so changed the number to 3 
 - Horizontal movement was working but vertical wasn't - forgot to update vy values so separated code into vertical and horizontal counterparts:
 
-'''//horizontal movement
+```//horizontal movement
     if(LEFT) {
       vx = -5;
     }
@@ -92,12 +92,12 @@ Brainstorming ideas for game:
     else if(!UP && !DOWN) {
       vy = 0;
     }
-'''
+```
 
 - Now just needed to add collisions - if the 'Player' square hits a circle, the game will reset (call setup()?)
 - Collisions function: 
 
-'''void collisions() {
+```void collisions() {
       for (Ball b : balls) {
       float px = p.x;
       float py = p.y;
@@ -121,14 +121,14 @@ Brainstorming ideas for game:
       }
     }
   }
-'''
+```
 
 - But collisions aren't really working well - problems with detecting edges 
 - deleted closestX + Y and distanceX + Y values and replaced with:
-'''if(bx + br > px && bx - br < px + pw &&
+```if(bx + br > px && bx - br < px + pw &&
        by + br > py && by - br < py + ph) {
       setup();
-      '''
+      ```
 
 - collisions work slightly better, but size of the balls is too big - reduced radius to 2 
 
