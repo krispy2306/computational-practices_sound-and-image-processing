@@ -31,7 +31,7 @@ Brainstorming ideas for game:
 - kept base code from class the same but changed the circles' radius to 5 so they were bigger for the player to avoid
 - began implementing a Player class
 - needed to create keyboard input for player movement:
-```  void update() {
+```void update() {
     //check for keys
     if(LEFT) {
       vx = -5;
@@ -50,12 +50,14 @@ Brainstorming ideas for game:
     y += vy;
 ```
 - player properties:
+
 ```void display() {
     stroke(255, 255, 255);
     strokeWeight(4);
     fill(255, 0, 0);
     rect(x, y, w, h);
 ```
+
 ```Player() {
     x = width/ 2;
     y = width / 2;
@@ -96,29 +98,29 @@ Brainstorming ideas for game:
 - Collisions function: 
 
 '''void collisions() {
-  for (Ball b : balls) {
-    float px = p.x;
-    float py = p.y;
-    float pw = p.w;
-    float ph = p.h;
-    
-    float bx = b.position.x;
-    float by = b.position.y;
-    float br = b.radius;
-    
-    float closestX = constrain(bx, px, px + pw);
-    float closestY = constrain(by, py, py + ph);
-    
-    float distanceX = bx - closestX;
-    float distanceY = by - closestY;
-    
-    float distanceSquared = distanceX * distanceX + distanceY * distanceY;
-    
-    if(distanceSquared < br * br) {
-      setup();
+      for (Ball b : balls) {
+      float px = p.x;
+      float py = p.y;
+      float pw = p.w;
+      float ph = p.h;
+      
+      float bx = b.position.x;
+      float by = b.position.y;
+      float br = b.radius;
+      
+      float closestX = constrain(bx, px, px + pw);
+      float closestY = constrain(by, py, py + ph);
+      
+      float distanceX = bx - closestX;
+      float distanceY = by - closestY;
+      
+      float distanceSquared = distanceX * distanceX + distanceY * distanceY;
+      
+      if(distanceSquared < br * br) {
+        setup();
+      }
     }
   }
-}
 '''
 
 - But collisions aren't really working well - problems with detecting edges 
