@@ -133,4 +133,4 @@ Brainstorming ideas for game:
 - collisions work slightly better, but size of the balls is too big - reduced radius to 2 
 
 
-FINAL NOTE: Collisions don't really work perfectly - sometimes it will not detect when the player is colliding wit a circle
+FINAL NOTE: Collisions don't really work perfectly - sometimes it will not detect when the player is colliding with a circle
