@@ -128,7 +128,7 @@ Brainstorming ideas for game:
 ```if(bx + br > px && bx - br < px + pw &&
        by + br > py && by - br < py + ph) {
       setup();
-      ```
+```
 
 - collisions work slightly better, but size of the balls is too big - reduced radius to 2 
 
