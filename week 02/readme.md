@@ -6,7 +6,7 @@ Created histograms for images uploaded
 
 Created greyscale images and altered brightness of pixels
 
-##Requirements:
+## Requirements:
 
 - Written in Processing 4.3
 - Run all files in Processing

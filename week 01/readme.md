@@ -1,8 +1,8 @@
 # Week 1 Tasks
 
-Experimented and explored pixels on the screen
-Worked with finding pixels and getting the colour
-Experimented with gradients and different directions and colours of the gradient
+- Experimented and explored pixels on the screen
+- Worked with finding pixels and getting the colour
+- Experimented with gradients and different directions and colours of the gradient
 
 ## Requirements:
 - Written in Processing 4.3

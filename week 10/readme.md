@@ -32,7 +32,6 @@ Started by going over code example: 'particle_system'
 - Created a particle class file first
 - stated variables like lifespan, all the forces, position and colour
 - created a ```void spawn()``` function to activate the particles
-- made the colour random(255) so that a different colour is generated every time you click
 - used the same ```void display()``` as the code given in class
 - removed the stroke and changed fill to tint
 
