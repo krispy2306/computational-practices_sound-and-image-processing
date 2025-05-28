@@ -97,6 +97,7 @@ but this did not work - constructor error
 - mouse interactions still not working - added PVector origin;
 - changed scale from 0.5 to 0.1 to help lag 
 - changed tint() in render function to: ```tint(c, map(lifespan, 0, 255, 0, 255));``` for fading out effect
+- added ```blendMode(ADD);```  for a glow effect 
 
 Outcome so far:
 ![alt text](images/image1.png)
@@ -126,4 +127,3 @@ void keyReleased() {
 }
 ```
 - changed wind value from 0.05 to 1 - wind effect is more obvious
-- added ```blendMode(ADD);```  for a glow effect 
