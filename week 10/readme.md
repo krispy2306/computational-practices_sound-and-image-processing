@@ -92,6 +92,6 @@ to:
 - changed tint() in render function to: ```tint(c, map(lifespan, 0, 255, 0, 255));``` for fading out effect
 
 Outcome so far:
-![alt text](Screenshot 2025-05-28 190129/image.png)
-![alt text](Screenshot 2025-05-28 185135/image.png)
-![alt text](Screenshot 2025-05-28 190146/image.png)
+![alt text](images/Screenshot 2025-05-28 190129.png)
+![alt text](images/Screenshot 2025-05-28 185135.png)
+![alt text](images/Screenshot 2025-05-28 190146.png)
