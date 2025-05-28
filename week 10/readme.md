@@ -31,9 +31,9 @@ Aim : Create an interactive sketch implementing particle systems and array lists
 - removed the stroke and changed fill to tint
 
 
-- Moved on to creating a 'system' class
+- Moved on to creating a 'ParticlSystem' class
 - created an array list for the particles:
-```ArrayList<Particle> particleList = new ArrayList<Particle>();```
+```ArrayList<Particle> particles = new ArrayList<Particle>();```
 - created particles using a for loop then added to the array list:
 
 ```particleSpawner(int number) {
@@ -75,3 +75,23 @@ to:
 ```
 
 - now I needed to add mouse interactions 
+- added: ```void mousePressed() {
+    particleList.add(new Particle(mouseX, mouseY, 60));
+  }
+  ``` 
+  but this did not work - constructor error
+
+- addded this to Particle class: 
+```Particle(float x, float y, int lifespan) {
+    this.pos = new PVector(x, y);
+    this.lifespan = lifespan;
+  }
+```
+- mouse interactions still not working - added PVector origin;
+- changed scale from 0.5 to 0.1 to help lag 
+- changed tint() in render function to: ```tint(c, map(lifespan, 0, 255, 0, 255));``` for fading out effect
+
+Outcome so far:
+![alt text](Screenshot 2025-05-28 190129/image.png)
+![alt text](Screenshot 2025-05-28 185135/image.png)
+![alt text](Screenshot 2025-05-28 190146/image.png)
