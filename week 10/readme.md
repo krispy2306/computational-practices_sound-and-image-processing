@@ -20,7 +20,7 @@ Aim : Create an interactive sketch implementing particle systems and array lists
 - At least 1 force e.g. wind
 
 
-- Started by going over code example: 'particle_system'
+Started by going over code example: 'particle_system'
 - Wanted to make a firework type visual effect
 
 - Created a particle class file first
