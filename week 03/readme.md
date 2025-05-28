@@ -4,13 +4,13 @@
 - Used vector primities to construct different shapes
 - Explored vector transformations and states (transformation matrix)
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.3
 - Run all files in Processing
 
 
-**Weekly Task - 'circle grid' file**
+## Weekly Task - 'circle grid' file
 
 The weekly task was to make a grid of circles, with each circle having a different colour in a checkerboard pattern.
 

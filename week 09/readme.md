@@ -3,7 +3,7 @@
 - Explored basics of object-oriented programming
 
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.4.4
 - Run files in Processing
@@ -12,7 +12,7 @@ the game sketch to work
 
 
 
-**GAME Weekly Task:**
+## GAME Weekly Task:
 
 Aim: Make a game using:
 - at least 1 class

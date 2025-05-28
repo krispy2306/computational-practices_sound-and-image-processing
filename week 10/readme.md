@@ -4,7 +4,7 @@
 - Implemented particle systems and array lists 
 
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.4.4
 - Run files in Processing
@@ -12,7 +12,7 @@
 - Ensure all data files are downloaded and put in your 'data' folder
 
 
-**Particle System Weekly Task**
+## Particle System Weekly Task
 
 
 **THIS TASK WAS DEVELOPED FURTHER OUTSIDE OF CLASS AS REQUIRED IN THE ASSESSMENT BRIEF**

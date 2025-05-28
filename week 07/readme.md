@@ -5,14 +5,14 @@
 - Created simple drum patterns using class knowledge  
 
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.3
 - Run files in Processing
 - Ensure files in data folder are downloaded for sketch to work
 
 
-**Sample Loop Weekly Task**
+## Sample Loop Weekly Task
 
 Aim: Using at least 4 samples, create a drum pattern.
 

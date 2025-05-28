@@ -6,13 +6,13 @@ Created histograms for images uploaded
 
 Created greyscale images and altered brightness of pixels
 
-**Requirements:**
+##Requirements:
 
 - Written in Processing 4.3
 - Run all files in Processing
 - Ensure files in data folder are downloaded for sketch to work
 
-**2 Colour Team File**
+## 2 Colour Team File
 
 - worked with Mikaela - I was coding while she was advising 
 - followed code done in class for colour swapping
@@ -22,7 +22,7 @@ Created greyscale images and altered brightness of pixels
 - (see '2-colour-flower.gif' file for outcome)
 
 
-**Greyscale Weekly Task File**
+## Greyscale Weekly Task File
 
 - weekly task: use the code given to revert the image back to original colour + 3 histograms for red, green, blue levels (RGB)
 - removed 'loadPixels' and displayed original image with: 'image(sample, 0, 0);

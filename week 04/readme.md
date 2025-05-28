@@ -6,13 +6,13 @@
 - Applied filters to images - brightness, contrast etc
 - Practiced functions that use parameters
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.3
 - Run files in Processing
 
 
-**Duotone Noise WEEKLY Task**
+## Duotone Noise WEEKLY Task
 
 Aim: create a landscape using Perlin noise and then apply a duotone filter to the pixels
 

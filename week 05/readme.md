@@ -5,13 +5,13 @@
 - Explored convolution and applied convolution kernels to an image 
 
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.3
 - Run files in Processing
 
 
-**Webcam Weekly Task**
+## Webcam Weekly Task
 
 Aim: Implement a real-time image program that applies a dithering and image filter (duotone) to the webcam
 

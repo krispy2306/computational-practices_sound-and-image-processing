@@ -5,13 +5,13 @@
 - Explored filters and frequency modulation 
 
 
-**Requirements:**
+## Requirements:
 
 - Written in Processing 4.3
 - Run 'sci fi sound' file in Processing
 
 
-**Sci-fi Sound Weekly Task**
+## Sci-fi Sound Weekly Task
 
 Aim: Using at least 3 oscillators and/or filters, design a sound for a sci-fi movie when the main characters arrive onto a new planet
 
