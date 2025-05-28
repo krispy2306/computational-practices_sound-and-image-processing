@@ -1,0 +1,32 @@
+class ParticleSystem {
+  ArrayList<Particle> particles = new ArrayList<Particle>();
+  PVector origin;
+  PVector wind = new PVector(1, 0);  // wind effect
+
+  ParticleSystem(float x, float y) {
+    origin = new PVector(x, y);
+  }
+
+  void spawnParticles(int count, PImage img) {
+    for (int i = 0; i < count; i++) {
+      particles.add(new Particle(origin.x, origin.y, int(random(200, 400)), img));
+    }
+  }
+
+  void update() {
+    for (Particle p : particles) {
+      if (p.active) {
+        if (windActive) {
+          p.force.add(wind);
+        }
+      p.update();
+    }
+  }
+  }
+
+  void render() {
+    for (Particle p : particles) {
+      p.render();
+    }
+  }
+}

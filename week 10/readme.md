@@ -9,9 +9,15 @@
 - Written in Processing 4.4.4
 - Run files in Processing
 - Ensure all class files are accessable for sketch to work
+- Ensure all data files are downloaded and put in your 'data' folder
 
 
 **Particle System Weekly Task**
+
+
+**THIS TASK WAS DEVELOPED FURTHER OUTSIDE OF CLASS AS REQUIRED IN THE ASSESSMENT BRIEF**
+- explored blending modes 
+
 
 Aim : Create an interactive sketch implementing particle systems and array lists. It should include:
 
@@ -97,4 +103,28 @@ Outcome so far:
 ![alt text](images/image1.png)
 ![alt text](images/image.png)
 
+- added new PVector wind for wind effect (```PVector wind = new PVector(0.05, 0);```) and
+```void keyPressed() {
+  if(key == 'w') {
+    for (ParticleSystem ps: particles) {
+      ps.addForce(wind);
+    }
+```
+- not working?! - weird syntax error in ParticleSystem class
+- decided to try boolean variable for whether wind is active or not - declared as false at the top
+- using keyPressed() and keyReleased:
 
+```void keyPressed() {
+  if(key == 'w') {
+    windActive = true;
+    }
+  }
+  
+void keyReleased() {
+  if (key == 'w') {
+    windActive = false;
+  }
+}
+```
+- changed wind value from 0.05 to 1 - wind effect is more obvious
+- added ```blendMode(ADD);```  for a glow effect 

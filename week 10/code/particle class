@@ -1,0 +1,40 @@
+class Particle {
+  PVector pos;
+  PVector velocity = new PVector();
+  PVector force = new PVector();
+  int lifespan;
+  boolean active = true;
+
+  color c = color(random(255));
+  PImage img;
+
+  Particle(float x, float y, int lifespan, PImage img) {
+    this.pos = new PVector(x, y);
+    this.lifespan = lifespan;
+    this.img = img;
+
+    float angle = radians(random(360));
+    float speed = random(2, 5);
+    velocity.set(cos(angle) * speed, sin(angle) * speed);
+  }
+
+  void update() {
+    if (!active) return;
+    velocity.add(force);
+    pos.add(velocity);
+    force.set(0, 0);
+
+    lifespan -= 2;
+    if (lifespan <= 0) active = false;
+  }
+
+  void render() {
+    if (!active) return;
+
+    tint(c, map(lifespan, 0, 255, 0, 255)); // fade out
+    float scale = 0.1;
+    float w = img.width * scale;
+    float h = img.height * scale;
+    image(img, pos.x - w / 2, pos.y - h / 2, w, h);
+  }
+}

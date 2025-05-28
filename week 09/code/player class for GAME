@@ -13,28 +13,19 @@ class Player {
   }
   
   void update() {
-    //horizontal movement
+    //check for keys
     if(LEFT) {
-      vx = -8;
+      vx = -5;
     }
     else if(RIGHT) {
-      vx = 8;
+      vx = 5;
     }
-    else if(!LEFT && !RIGHT) {
-      vx = 0;
+    if(UP){
+      vy = -5;
     }
-    
-    // vertical movement
-    if(UP) {
-      vy = -8;
+    if(DOWN){
+      vy = 5;
     }
-    else if(DOWN) {
-      vy = 8;
-    }
-    else if(!UP && !DOWN) {
-      vy = 0;
-    }
-    
     // update position
     x += vx;
     y += vy;
@@ -50,14 +41,14 @@ class Player {
       y = height;
     }
     else if(y > height) {
-      y = -height;
+      y = -h;
     }
   }
     
   void display() {
-    fill(255, 0, 0);
     stroke(255, 255, 255);
-    strokeWeight(5);
+    strokeWeight(4);
+    fill(255, 0, 0);
     rect(x, y, w, h);
   }
-}  
+} 

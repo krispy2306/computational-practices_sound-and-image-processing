@@ -1,0 +1,36 @@
+ArrayList<ParticleSystem> systems = new ArrayList<ParticleSystem>();
+PImage particleImg;
+boolean windActive = false;
+
+void setup() {
+  size(1000, 700);
+  particleImg = loadImage("simple-colored-particle-light-png-13.png");
+  imageMode(CENTER);
+  noStroke();
+}
+
+void draw() {
+  background(0);
+  blendMode(ADD);  // glow effect
+  for (ParticleSystem ps : systems) {
+    ps.spawnParticles(1, particleImg);  
+    ps.update();
+    ps.render();
+  }
+}
+
+void mousePressed() {
+  systems.add(new ParticleSystem(mouseX, mouseY));
+}
+
+void keyPressed() {
+  if(key == 'w') {
+    windActive = true;
+    }
+  }
+  
+void keyReleased() {
+  if (key == 'w') {
+    windActive = false;
+  }
+}
