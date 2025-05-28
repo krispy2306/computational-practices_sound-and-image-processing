@@ -75,13 +75,15 @@ to:
 ```
 
 - now I needed to add mouse interactions 
-- added: ```void mousePressed() {
+- added: 
+```void mousePressed() {
     particleList.add(new Particle(mouseX, mouseY, 60));
   }
 ``` 
-  but this did not work - constructor error
+but this did not work - constructor error
 
 - addded this to Particle class: 
+
 ```Particle(float x, float y, int lifespan) {
     this.pos = new PVector(x, y);
     this.lifespan = lifespan;
